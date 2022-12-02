@@ -16,7 +16,7 @@ struct Theme_BuggyApp: App {
             ThemeView()
         } label: {
             if theme.isEmpty {
-                Text("Set a theme")
+                Text("Theme Buggy")
             } else {
                 Text(theme)
             }

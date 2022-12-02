@@ -7,28 +7,36 @@
 
 import SwiftUI
 
-
 struct ThemeView: View {
     @State var showSettings: Bool = false
+    @State var edit: Bool = false
     @AppStorage("theme") var theme: String = ""
 
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Button {
-                    self.showSettings = true
-                } label: {
-                    Image(systemName: "gear").foregroundColor(.primary)
+            VStack {
+                if edit {
+                    HStack {
+                        TextField("Theme", text: $theme ).font(.largeTitle).minimumScaleFactor(0.5).multilineTextAlignment(.center)
+                        Button {
+                            self.edit.toggle()
+                        } label: {
+                            Text("Done")
+                        }.keyboardShortcut(.defaultAction)
+                    }
+                } else {
+                    ZStack {
+                        if theme.isEmpty {
+                            Text("Set a theme").font(.largeTitle).minimumScaleFactor(0.5)
+                        } else {
+                            Text(theme).font(.largeTitle).minimumScaleFactor(0.5)
+                        }
+                    }
+                    .onTapGesture {
+                            self.edit.toggle()
+                        }
                 }
-                .buttonStyle(.plain)
-                .sheet(isPresented: $showSettings) {
-                    ThemeSettingsView(showingSheet: $showSettings)
-                }
-            }
-            .padding(.bottom)
-            Text("\(theme)").font(.largeTitle).minimumScaleFactor(0.5)
-                .padding()
+            }.padding()
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
             }.keyboardShortcut("q")
