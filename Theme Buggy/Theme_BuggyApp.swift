@@ -10,8 +10,8 @@ import SwiftUI
 @main
 struct Theme_BuggyApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+        MenuBarExtra("Menu Bar item", systemImage: "circle.fill") {
+            ThemeView()
+        }.menuBarExtraStyle(.window)
     }
 }

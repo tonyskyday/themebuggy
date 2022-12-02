@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D5B04132293A7F5E00501356 /* Theme_BuggyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B04131293A7F5E00501356 /* Theme_BuggyApp.swift */; };
-		D5B04134293A7F5E00501356 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B04133293A7F5E00501356 /* ContentView.swift */; };
+		D5B04134293A7F5E00501356 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B04133293A7F5E00501356 /* ThemeView.swift */; };
 		D5B04136293A7F6000501356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B04135293A7F6000501356 /* Assets.xcassets */; };
 		D5B04139293A7F6000501356 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B04138293A7F6000501356 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		D5B0412E293A7F5E00501356 /* Theme Buggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Theme Buggy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B04131293A7F5E00501356 /* Theme_BuggyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme_BuggyApp.swift; sourceTree = "<group>"; };
-		D5B04133293A7F5E00501356 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D5B04133293A7F5E00501356 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		D5B04135293A7F6000501356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5B04138293A7F6000501356 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D5B0413A293A7F6000501356 /* Theme_Buggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Theme_Buggy.entitlements; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				D5B04131293A7F5E00501356 /* Theme_BuggyApp.swift */,
-				D5B04133293A7F5E00501356 /* ContentView.swift */,
+				D5B04133293A7F5E00501356 /* ThemeView.swift */,
 				D5B04135293A7F6000501356 /* Assets.xcassets */,
 				D5B0413A293A7F6000501356 /* Theme_Buggy.entitlements */,
 				D5B04137293A7F6000501356 /* Preview Content */,
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5B04134293A7F5E00501356 /* ContentView.swift in Sources */,
+				D5B04134293A7F5E00501356 /* ThemeView.swift in Sources */,
 				D5B04132293A7F5E00501356 /* Theme_BuggyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +279,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fanfarestudio.Theme-Buggy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,6 +307,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fanfarestudio.Theme-Buggy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
