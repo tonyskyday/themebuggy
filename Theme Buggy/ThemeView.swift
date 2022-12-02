@@ -7,12 +7,32 @@
 
 import SwiftUI
 
+
 struct ThemeView: View {
-    @AppStorage("theme") var theme: String = "The Year of Me"
-    
+    @State var showSettings: Bool = false
+    @AppStorage("theme") var theme: String = ""
+
     var body: some View {
         VStack {
-            Text("\(theme)")
+            HStack {
+                Spacer()
+                Button {
+                    self.showSettings = true
+                } label: {
+                    Image(systemName: "gear").foregroundColor(.primary)
+                }
+                .buttonStyle(.plain)
+                .sheet(isPresented: $showSettings) {
+                    ThemeSettingsView(showingSheet: $showSettings)
+                }
+            }
+            .padding(.bottom)
+            Text("\(theme)").font(.largeTitle).minimumScaleFactor(0.5)
+                .padding()
+            Button("Quit") {
+                NSApplication.shared.terminate(nil)
+            }.keyboardShortcut("q")
+                .padding(.top)
         }
         .padding()
     }

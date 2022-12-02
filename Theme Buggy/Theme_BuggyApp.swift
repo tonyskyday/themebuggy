@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct Theme_BuggyApp: App {
+    @AppStorage("theme") var theme: String = ""
+
     var body: some Scene {
-        MenuBarExtra("Menu Bar item", systemImage: "circle.fill") {
+        MenuBarExtra{
             ThemeView()
+        } label: {
+            if theme.isEmpty {
+                Text("Set a theme")
+            } else {
+                Text(theme)
+            }
         }.menuBarExtraStyle(.window)
     }
 }
