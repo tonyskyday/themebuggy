@@ -1,0 +1,4 @@
+*.swift                  @tonyskyday
+*.xcodeproj/*            @tonyskyday
+*.json                   @tonyskyday
+CODEOWNERS               @tonyskyday
